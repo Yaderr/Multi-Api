@@ -8,13 +8,14 @@
   },
   "scripts": {
     "test": "tap test/**/*.test.js",
-    "start": "fastify start -l info app.js",
+    "start": "node index.js",
     "dev": "fastify start -w -l info -P app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "fastify": "^3.0.0",
     "fastify-autoload": "^3.0.2",
     "fastify-cli": "^2.5.1",
