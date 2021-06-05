@@ -12,7 +12,8 @@ module.exports = async function (fastify, opts) {
   // those should be support plugins that are reused
   // through your application
   fastify.register(require('fastify-cors'), {
-    'access-control-allow-origin': '*'
+    'access-control-allow-origin': '*',
+    origin: '*'
   })
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
