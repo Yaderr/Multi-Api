@@ -13,7 +13,8 @@ module.exports = async function (fastify, opts) {
   // through your application
   fastify.register(require('fastify-cors'), {
     'access-control-allow-origin': '*',
-    origin: '*'
+    origin: '*',
+    "Access-Control-Allow-Methods": '*'
   })
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
