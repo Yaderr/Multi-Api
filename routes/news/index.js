@@ -1,7 +1,12 @@
 'use strict'
 const fetch = require('node-fetch')
+const api_url = 'https://newsapi.org/v2'
 module.exports = async function (fastify, opts) {
-  fastify.get('/', async function (request, reply) {
-    return await(await fetch('https://newsapi.org/v2/top-headlines?country=US&apiKey=9021ee683b674f3098812707f20f029e')).json()
+  fastify.get('*', async function (request, reply) {
+    
+    const url_req = request.url.split('news')[1];
+    const res = await fetch(`${api_url}${url_req}`).then((data) => data.json())
+    
+    return res
   })
 }
