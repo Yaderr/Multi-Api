@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path')
-const AutoLoad = require('fastify-autoload')
+const AutoLoad = require('@fastify/autoload')
 
 module.exports = async function (fastify, opts) {
   // Place here your custom code!
@@ -15,10 +15,6 @@ module.exports = async function (fastify, opts) {
     'access-control-allow-origin': '*',
     origin: '*',
     "Access-Control-Allow-Methods": '*'
-  })
-  fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'plugins'),
-    options: Object.assign({}, opts)
   })
 
   // This loads all plugins defined in routes

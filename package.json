@@ -15,13 +15,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/autoload": "^4.0.0",
     "dotenv": "^8.2.0",
-    "fastify": "^3.0.0",
-    "fastify-autoload": "^3.0.2",
+    "fastify": "^4.17.0",
     "fastify-cli": "^2.5.1",
     "fastify-cors": "^5.0.0",
-    "fastify-plugin": "^3.0.0",
-    "node-fetch": "^2.6.1"
+    "fastify-plugin": "^3.0.0"
   },
   "devDependencies": {
     "tap": "^14.0.0"
