@@ -25,7 +25,6 @@ module.exports = async function(fastify, opts) {
     }
 
     fastify.get('*', handler)
-    fastify.head('*', handler)
     fastify.post('*', handler)
     fastify.put('*', handler)
     fastify.delete('*', handler)
