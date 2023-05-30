@@ -7,8 +7,7 @@ require('dotenv').config()
 const fastify = require('fastify')({})
 
 fastify.register(require("@fastify/cors"), {
-  origin: true,
-  methods: ["GET", "POST"]
+  origin: true
 })
 
 // Register your application as a normal plugin.
