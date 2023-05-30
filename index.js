@@ -7,7 +7,7 @@ require('dotenv').config()
 const fastify = require('fastify')({})
 
 fastify.register(require("@fastify/cors"), {
-  origin: '*',
+  origin: true,
   methods: ["GET", "POST"]
 })
 
