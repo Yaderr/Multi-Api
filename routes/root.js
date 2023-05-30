@@ -6,7 +6,7 @@ module.exports = async function(fastify, opts) {
     const handler =  async function(request, reply) {
 
         const { headers, url, method } = request
-        const hostName = headers['host-name']
+        const hostName = headers['host-api-name']
         if(!hostName) return new Error('Invalid request, check docs')
 
         const apiKey = process.env[headers['api-key-env']]

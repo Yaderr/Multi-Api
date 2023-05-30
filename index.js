@@ -7,9 +7,9 @@ require('dotenv').config()
 const fastify = require('fastify')({})
 
 fastify.register(require("@fastify/cors"), {
-  origin: '*',
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "*"
+  "Access-Control-Allow-Origin": "*", 
+  "Access-Control-Allow-Headers": "*",
+  origin: ['https://web.app', 'https://newzia-app.web.app/', 'https://newzia-app.web.app', 'http://newzia-app.web.app', 'http://web.app'],
 })
 
 // Register your application as a normal plugin.
