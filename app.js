@@ -14,7 +14,8 @@ module.exports = async function (fastify, opts) {
   fastify.register(require('@fastify/cors'), {
     'access-control-allow-origin': '*',
     origin: '*',
-    "Access-Control-Allow-Methods": '*'
+    "Access-Control-Allow-Methods": '*',
+    methods: ['GET', 'POST', 'PUT']
   })
 
   // This loads all plugins defined in routes
