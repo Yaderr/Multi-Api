@@ -7,7 +7,7 @@ require('dotenv').config()
 const fastify = require('fastify')({})
 
 fastify.register(require("@fastify/cors"), {
-  origin: "*",
+  origin: ['https://newzia-app.web.app'],
   methods: ["GET", "POST"]
 })
 
