@@ -6,11 +6,9 @@ require('dotenv').config()
 // Require the framework
 const fastify = require('fastify')({})
 
-fastify.register(require('@fastify/cors'), {
-  'access-control-allow-origin': '*',
-  origin: '*',
-  "Access-Control-Allow-Methods": '*',
-  methods: ['GET', 'POST', 'PUT']
+fastify.register(require("@fastify/cors"), {
+  origin: "*",
+  methods: ["GET", "POST"]
 })
 
 // Register your application as a normal plugin.
