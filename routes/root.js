@@ -11,17 +11,21 @@ module.exports = async function(fastify, opts) {
 
         const apiKey = process.env[headers['api-key-env']]
 
-        const result = await fetch(`${hostName}${url} `, {
-            method,
-            headers: {
-               'Authorization': apiKey
-            }
-        })
-        const response = await result.json()
-
-        console.log(result);
-                
-        return reply.code(result.status).send(response)
+        try {
+            const result = await fetch(`${hostName}${url} `, {
+                method,
+                headers: {
+                   'Authorization': apiKey
+                }
+            })
+            const response = await result.json()
+    
+            console.log(result);
+                    
+            return reply.code(result.status).send(response)
+        } catch (error) {
+            return new Error(error)
+        }
     }
 
     fastify.get('*', handler)
